@@ -1,2 +1,2 @@
 # FundamentosDJS_230592
-Repositorio de Fundamentos de JS, donde se implementan los conocimientos básicos de JavaScript
+Proyecto de clase para la unidad 1 de la asignatura de Aplicaciones Web Orientada a Servicios (AWOS)
