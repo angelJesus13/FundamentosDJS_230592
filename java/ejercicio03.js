@@ -47,4 +47,29 @@ console.log("En el caso del SKU al serl un symbol, no se puede concatenar a la c
 console.log(Producto_SKU);
 console.log(typeof(Producto_SKU));
 //Ahora declaramos como un objeto
+console.log("%c2.- Objeto", style_console);
+let Producto = {
+  Nombre: "Tenis Deportivos",
+  Marca: "Hoka",
+  Modelo: "SpeedGoat 6",
+  Precio: 4000.0,
+  Disponibilidad: false,
+  Stock: 0,
+  ID: 3216,
+  SKU: "HK23525-S98",
+  Imagen: ".",
+  Barcode: null,
+  Categorias: ["Deportes", "Running"],
+};
+// Ahora leemos el objeto completo
+console.table(Producto);
 
+console.log("Accediendo a propiedades específicas del PRODUCTO");
+console.log(
+  `Nombre Completo del PRODUCTO: ${Producto.Nombre} ${Producto.Marca} ${Producto.Modelo}`
+);
+console.log(`Precio: ${Producto.Precio}`);
+if (Producto.Disponibilidad == 0) console.log(`Estatus: Agotado`);
+else console.log(`Estatus: ${Producto_Stock} unidades disponibles.`);
+
+// Desestructuración de Objetos.
