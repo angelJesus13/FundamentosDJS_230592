@@ -73,3 +73,40 @@ if (Producto.Disponibilidad == 0) console.log(`Estatus: Agotado`);
 else console.log(`Estatus: ${Producto_Stock} unidades disponibles.`);
 
 // Desestructuración de Objetos.
+
+console.log("%c3.- Destructuración de Objetos", style_console);
+
+let Producto2 = {
+    ID: 316,
+    Nombre: "Laptop iMac",
+    Marca: "Apple",
+    Modelo: "Mac M1",
+    Precio: "20000.00",
+    Disponibilidad: true,
+    Stock: "4",
+    SKU: "JAu1293jnK92",
+    Imagen: " ",
+    Barcode: 12347574843,
+    Categorias: ["Tecnologia", "Portatiles", "Gama premium"],
+};
+
+let comprador = {
+  ID: 3010,
+  Nombre: "Angel de Jesus",
+  Apellido:"Baños Tellez",
+  Tipo:"Frecuente",
+  Correo:"tellezangel@utxicotepec.edu.mx",
+  PaisOrigen:"México",
+  SaldoActual:"4900.00",
+};
+
+let pedido = {
+  ID:588,
+  Producto_ID: 317,
+  Comprador_ID: 3010,
+  Cantidad: 1,
+  Estatus: "Carrito de Compra",
+  TipoPago: "Tarjeta de Debito",
+};
+
+//En base a los 3 productos calculamos el costo de la compra y si es quie le alcanza para comprar el producto 
