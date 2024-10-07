@@ -110,3 +110,47 @@ let pedido = {
 };
 
 //En base a los 3 productos calculamos el costo de la compra y si es quie le alcanza para comprar el producto 
+
+let { Precio: Producto_Precio2 } = Producto2;
+let { Cantidad: Pedido_Cantidad } = Pedido;
+let { SaldoActual: Cliente_SaldoActual } = Comprador;
+let Costo_Compra = Producto_Precio2 * Pedido_Cantidad;
+
+console.log(
+  `El cliente ha agregado a su carrito de compras ${Pedido_Cantidad} unidades, con un costo total de: $${Costo_Compra}`
+);
+if (Costo_Compra < Cliente_SaldoActual)
+  console.log("El cliente tiene saldo suficiente.");
+
+//Actualizar el valor de los objetos
+
+console.log(
+  "%c4.- Actualizacion de los valores de las propiedades de un objeto",
+  style_console
+);
+
+console.log(`-------------------------------------`);
+console.log("El objeto actualmente tiene los siguientes valores");
+let tipoDisponibilidad = typeof Producto2.Disponibilidad;
+console.log();
+console.log(JSON.stringify(Producto2, null, 2));
+
+//Agregar nuevas propiedades a un objeto existente
+console.log(
+  "%c5.- Actualizacion de las propiedades de un Objeto",
+  style_console
+);
+console.log(JSON.stringify(Comprador));
+console.log("Objeto antes de ser modificado");
+console.table(Comprador);
+
+//Agregando propiedades
+Comprador["Direccion"] =
+  "Benito Juarez #6, Colonia Los Alpes, Juan Galindo, Puebla, Mexico";
+Comprador["Tipo"] = "Premium";
+Comprador["Estatus"] = "Inactivo";
+Comprador["TotalCompra"] = 175000.0;
+console.log("Objeto despues de ser modificado: ");
+console.table(Comprador);
+
+//Eliminar propiedades de un objeto existente
