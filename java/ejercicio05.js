@@ -281,3 +281,95 @@ do {
 
 } while (continuarViendo && indice < episodio.length);
 console.log("Fin de la reproduccion")
+
+console.log("%c9.- Ciclos para recprer elemntos finitos - (FOR...OF)", style_console);
+
+let seriesTrending = [
+    {nombre: "Heartstopper", temporadas: 3, totalViewers: "1.5M", totalReprods: "1.0M" },
+    {nombre: "Loki", temporadas: 4, totalViewers: "2.5M", totalReprods: "2.0M" },
+    {nombre: "The boys", temporadas: 2, totalViewers: "7.5M", totalReprods: "1.2M" },
+    {nombre: "My Hero Academia", temporadas: 7, totalViewers: "12.5M", totalReprods: "4.0M" },
+    {nombre: "The last time", temporadas: 4, totalViewers: "2.5M", totalReprods: "2.0M" },
+];
+
+//usando for...of para recorrer la lista
+
+for(let serie of seriesTrending){
+    console.log(`Serie: ${serie.nombre}, Temporadas: ${serie.temporadas}`)
+}
+
+
+console.log("%c10-. Ciclos para recorrer las propiedades de elementos finitos (FOR...IN)", style_console)
+//usando for...in
+
+for (let i in seriesTrending){
+    console.log(`Serie ${parseInt(i)+1}:`);
+
+for (let propiedad in seriesTrending[i]){
+    console.log(`${propiedad}: ${seriesTrending[i][propiedad]}`)
+    }
+    console.log(`--------------`)
+}
+
+console.log("%c11-. Ciclos inenterrumpidos para el tamaño del arreglo (forEach)", style_console)
+
+//lista de series de TV trending con temporadas, viewers y reproducciones
+let seriesTrending2 = [
+    {
+      nombre: "La Casa de Papel",
+      temporadas: "5",
+      viewers: "800000",
+      reproducciones: "25000000",
+    },
+    {
+      nombre: "The Boys",
+      temporadas: "5",
+      viewers: "1200000",
+      reproducciones: "1500000",
+    },
+    {
+      nombre: "Los 100",
+      temporadas: "7",
+      viewers: "1600000",
+      reproducciones: "80000000",
+    },
+    {
+      nombre: "Bob Esponja",
+      temporadas: "14",
+      viewers: "20 M",
+      reproducciones: "80 M",
+    },
+    {
+      nombre: "Reacher",
+      temporadas: "3",
+      viewers: "400000000",
+      reproducciones: "70000000000",
+    },
+  ];
+
+// Usando forEach para recorrer cada serie y calcular la calificacion
+seriesTrending2.forEach((serie, index) => {
+    // Cambié 'Serie' a 'serie'
+    let calificacion = (serie.reproducciones / serie.viewers).toFixed(2);
+    //Calcula la calificación y la redondea a 2 decimales
+    console.log(`Serie: ${index + 1}:`);
+    console.log(`Nombre: ${serie.nombre}:`);
+    console.log(`Temporadas: ${serie.temporadas}:`);
+    console.log(`Viewers: ${serie.viewers}:`);
+    console.log(`Reproducciones: ${serie.reproducciones}:`);
+    console.log(`Calificación: ${calificacion}:`);
+    console.log(`--------------------`);
+  });
+  
+  //Usando filter para filtrar y map para transformar la informacion
+  //Lista de series que queremos verificar
+  let seriesDeseasas = ["The Witcher", "The Boys", "Loki"];
+  //Usando map e includes para filtrar y obtener los nombres de las series con 3 temporadas
+  let seriesConTresTemporadas = seriesTrending2
+    .filter((serie) => serie.temporadas <= 3)
+    .map((serie) => serie.nombre)
+    .filter((nombre) => seriesDeseasas.includes(nombre));
+  
+  //Mostrar los resultados
+  console.log("Series con 3 temporadas que estan en la lista deseada");
+  console.log(seriesConTresTemporadas);
