@@ -12,7 +12,7 @@ Previo a iniciar el desarrollo de software para web el framework de NodeJS, real
 | 4   | Declaración de Variables (symbol, null, number, function)       | Finalizada| 6           |
 | 5   | Introducción de objetos                                           | Finalizada| 19          |
 | 6   | Arreglos (Declaracion,Multidimensionales y array methods)| Finalizada | 18 |
-| 7   | [Descripción de la práctica]                         | Activa | 16 |
+| 7   | Sentencias de Control y Repaso de Ciclos con arrays | Finalizáda | 16 |
 
  
 ## AUTOR
